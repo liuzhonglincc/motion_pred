@@ -48,8 +48,6 @@ our_pred_model
 python ByteTrack/tools/track_our_pred_model.py -f ByteTrack/exps/example/dancetrack/yolox_x.py -c ByteTrack/pretrained/bytetrack_model.pth.tar -b 1 -d 1 --fp16 --fuse
 mlp
 python ByteTrack/tools/track_our_pred_model_mlp.py -f ByteTrack/exps/example/dancetrack/yolox_x.py -c ByteTrack/pretrained/bytetrack_model.pth.tar -b 1 -d 1 --fp16 --fuse
-```
 然后运行
-```
 python3 TrackEval/scripts/run_mot_challenge.py --SPLIT_TO_EVAL val  --METRICS HOTA CLEAR Identity  --GT_FOLDER dancetrack/val --SEQMAP_FILE dancetrack/val_seqmap.txt --SKIP_SPLIT_FOL True   --TRACKERS_TO_EVAL '' --TRACKER_SUB_FOLDER ''  --USE_PARALLEL True --NUM_PARALLEL_CORES 8 --PLOT_CURVES False --TRACKERS_FOLDER YOLOX_outputs/yolox_x/track_results
 ```
